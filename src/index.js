@@ -9,7 +9,7 @@ var numbers = [3, 56, 2, 48, 5];
 // const newNumbers =numbers.map(double);
 // console.log(newNumbers);
 
-// The above in vanilla JS is:
+// USING FOREACH()
 
 // var newNumbers = [];
 
@@ -25,18 +25,31 @@ var numbers = [3, 56, 2, 48, 5];
 // });
 // console.log(newNumbers);
 
-// In vanilla
+// USING FOREACH()
 
-var newNumbers = [];
-numbers.forEach(function (num) {
-  if (num > 10) {
-    newNumbers.push(num);
-  }
+// var newNumbers = [];
+// numbers.forEach(function (num) {
+//   if (num > 10) {
+//     newNumbers.push(num);
+//   }
+// });
+
+// console.log(newNumbers);
+
+//Reduce - Accumulate a value by doing something to each item in an array. ==========================
+
+var newNumber = numbers.reduce(function (accumulator, currentNumber) {
+  return accumulator + currentNumber;
 });
 
-console.log(newNumbers);
+// USING FOREACH()
 
-//Reduce - Accumulate a value by doing something to each item in an array.
+// var newNumber = 0;
+// numbers.forEach(function(currentNumber){
+//   newNumber += currentNumber
+// });
+
+console.log(newNumber);
 
 //Find - find the first item that matches from an array.
 
